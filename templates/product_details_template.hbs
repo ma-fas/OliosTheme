@@ -1,0 +1,44 @@
+<section id="productInfo">
+	<div class="product-details">	   			
+		<div class="product-zoom-wrap">
+			<div class="product-like">
+				<p id="like-counter">495</p>
+			</div> 
+			<img id="photo-zoom" src="{{src_sm}}" data-zoom-image="{{src}}"/>
+			<div class="zoom-panel">
+				<img id="zoom-panel-plus" src="img/icons/plus.png">
+				<img id="zoom-panel-minus" src="img/icons/minus.png">
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="product-head">
+				<h2>Products</h2>
+				<span>
+					<p>living room</p>
+					<img src="img/icons/living-room.png">
+				</span>
+			</div>
+			<div class="product-info">
+				<h1>{{name}}</h1>
+				<p class="sub-heading">- Office</p>
+				<p>{{description_full}}</p>
+			</div>
+			<div class="product-options">
+				<div class="price-panel">
+	    			<div >
+	    				<h3>price</h3>
+		    			<p class="price" id="price-current">{{price_current}}</p>
+		    			<p id="price-previous">{{price_previous}}</p>
+	    			</div>
+	    			<div class="quantity">
+	    				<h3>quantity</h3>
+	    				<input id="quantity" type="number" name="quantity" min="0" max="30" placeholder="0">
+	    			</div>
+	    			<button id="add-to-cart" class="btn-cart">add to cart</button>
+	    		</div>
+			</div>	
+		</div>
+	</div>
+	<button id="btn-return" class="btn-return">return</button>
+</section>

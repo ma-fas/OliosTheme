@@ -1,0 +1,15 @@
+@mixin add-shadow-right {
+	box-shadow: 1px 0 5px #B9B9B9;
+}
+
+@mixin add-shadow-left {
+	box-shadow: -1px 0 5px #B9B9B9;
+}
+
+@mixin margin($val) {
+	margin: $val auto;
+}
+
+@mixin add-ease {
+	transition: 0.7s ease;
+}

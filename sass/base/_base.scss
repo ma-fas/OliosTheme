@@ -1,0 +1,39 @@
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	background-color: $bg-main;
+	color: $txt-main;
+	position: relative;
+	overflow-x: hidden;
+	width: 100%;
+	min-height: 100vh;
+}
+
+section {
+	display: block;
+	position: relative;
+	margin-left: 50px;
+	text-align: center;
+	font-weight: 100;
+	text-transform: uppercase;
+	padding: 3vh 0;
+ 	&#homePage {
+ 		padding: 0;
+ 	}
+ 	&#productInfo {
+		background: $bg-sec;
+		padding-bottom: 0;
+	}
+}
+
+.container {
+	padding: 0 2vw;
+
+}
+
+.container-main {
+	padding: 6vh 0 2vh 0;
+}
+
+
+

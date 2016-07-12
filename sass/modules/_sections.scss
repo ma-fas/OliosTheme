@@ -1,0 +1,206 @@
+.product-head {
+ 	display: flex;
+	flex-direction: column;
+	text-align: left;
+	h1 {
+		font-size: 10vw;
+		font-weight: 300;
+		margin: 0;
+	}
+	span {
+		display: flex;
+		padding-top: 10px;
+		color: $txt-sec;
+		line-height: 30px;
+		vertical-align: middle;
+		img {
+			width: 30px;
+			height: 30px;
+			margin-left: 10px;
+		}
+	}
+}
+
+.product-row {
+	margin-top: 20px;
+}
+
+.product {
+	display: block;
+	max-width: 500px;
+	margin: 0 auto;
+	background-color: $bg-sec;
+	padding: 0px 20px 20px;
+	overflow: hidden;
+	&:not(:last-of-type) {
+		margin-bottom: 20px;
+	}
+	&:hover {
+		img {
+			transform: scale(1.1);
+		}
+	}
+	img {
+		width: 50%;
+		height: auto;
+		@include add-ease;
+	}
+}
+
+.product-info {
+	padding-top:  20px;
+}
+
+h2 {
+	font-weight: 300;
+	font-size: 1.8rem;
+}
+
+p {
+	text-transform: none;
+	color: $txt-sec;
+}
+
+.price {
+	color: $accent;
+	font-weight: 600;
+	margin-top: 10px;
+}
+
+/* product page */
+
+.product-details {
+
+	.container {
+		padding-top: 20px; 
+		padding-right: 20px;
+		padding-bottom: 30px;
+		background: $bg-main;
+		text-align: left;
+	}
+	.product-head {
+		h2 {
+			font-size: 30px;
+		}
+	}
+	.product-info {
+		h1 {
+			margin: 0;
+			font-size: 3.2rem;
+			font-weight: 300;
+			color: $accent;
+		}
+		.sub-heading {
+			font-size: 2.4rem;
+			color: $txt-main;
+			font-weight: 300;
+			text-transform: uppercase;
+			padding-bottom: 20px;
+		}
+		p {
+			font-weight: 500;
+		}
+	}
+}
+
+.product-zoom-wrap {
+	position: relative;
+	padding: 7vw 15px 60px;
+	overflow: hidden;
+	background: $bg-sec;
+	> img {
+		width: 100%;
+	}
+}
+
+.product-like {
+	position: absolute;
+	top: 15vw;
+	right: 6vw;
+	z-index: 6;
+	#like-counter {
+		display: inline-block;
+		position: relative;
+		color: $txt-sec;
+		font-weight: 300;
+		padding-right: 40px;
+		&:after {
+			content: '';
+			position: absolute;
+			display: inline-block;
+			top: -2px;
+			right: 0px;
+			background: url('../img/icons/like.png');
+			width: 32px;
+			height: 30px;
+		}
+		&.active {
+			&:after {
+				background: url('../img/icons/like-a.png');
+			}
+		}
+		&:hover {
+				cursor: pointer;
+			}
+	}
+}
+
+.zoom-panel {
+	position: absolute;
+	left: 20px;
+	bottom: 10px;
+	img {
+		margin-right: 10px;
+		cursor: pointer;
+	}
+}
+
+.price-panel {
+	display: flex;
+	flex-direction: column;
+	margin-top: 2em;
+	div	{
+		margin-bottom: 30px;
+	}
+	h3 {
+		color: $txt-sec;
+		padding-bottom: 10px;
+	}
+	p {
+		display: inline;
+		vertical-align: middle;
+		&:first-of-type {
+			padding-right: 20px;
+			font-size: 2rem;
+		}
+		&:last-of-type {
+			font-size: 1.2rem;
+			color: $txt-main;
+			font-weight: 500;
+			text-decoration: line-through;
+		}
+	}
+	.btn-cart {
+		background: $accent;
+		border-radius: 25px;
+		padding: 10px 20px;
+		height: 37px;
+		max-width: 150px;
+		margin-top: 29px;
+		color: $bg-sec;
+		text-transform: uppercase;
+		font-weight: 500;
+		font-size: 0.9rem;
+	}
+}
+
+.quantity input {
+	background-color: $bg-sec;
+	width: 60px;
+	height: 35px;
+	border: 1px solid $txt-sec;
+	border-radius: 25px;
+	padding: 5px 10px;
+	color: $txt-main;
+	font-weight: 500;
+}

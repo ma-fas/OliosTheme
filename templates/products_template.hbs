@@ -1,0 +1,28 @@
+<section>
+	<div class="container">
+		<div class="product-head">
+			<h1>Products</h1>
+			<span>
+				<p>living room</p>
+				<img src="img/icons/living-room.png">
+			</span>
+		</div>
+
+		<div id="products-showcase">
+			<div class="product-row">
+				{{#each category}}
+					{{#each items}}
+						<div id="product" class="product product-sm" href="product-info.html" data-id="{{@index}}"  data-parent="{{../name}}">
+							<img src="{{src_sm}}">
+							<div class="product-info">
+								<h2>{{name}}</h2>
+								<p>{{description_short}}</p>
+								<p class="price">{{price_current}}</p>
+							</div>
+						</div>
+					{{/each}}
+				{{/each}}
+			</div>
+		</div>
+	</div>
+</section>

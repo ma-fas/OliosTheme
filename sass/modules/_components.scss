@@ -1,0 +1,153 @@
+/* buttons */
+
+.btn-more {
+	background: $accent;
+	padding: 10px 40px;
+	border-radius: 25px;
+	margin-top: 30px;
+	@include add-ease;
+	a {
+		color: $bg-sec;
+		text-transform: uppercase;
+		font-weight: 500;
+		font-size: 0.9rem;
+	}
+	&:hover {
+		@include add-shadow-left;
+		opacity: 0.7;
+	}
+} 
+
+.btn-return {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	width: 70px;
+	height: 70px;
+	line-height: 60px;
+	vertical-align: middle;
+	border-radius: 50%;
+	color: $accent;
+	font-weight: 700;
+	background-color: $bg-sec;
+	@include add-shadow-right;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: all 0.5s;
+	z-index: 10;
+	&:hover {
+		opacity: 0.6;
+	}
+}
+/*carousel */
+#carousel {
+	margin-top: 10vw;
+	img {
+		max-width: 100%;
+	}
+}
+.owl-pagination {
+	display: none;
+}
+
+.owl-theme .owl-controls .owl-page {
+	display: inline-block;
+}
+
+.owl-theme .owl-controls .owl-page.active {
+	span {
+		background-color: $accent;
+		height: 12px;
+		width: 12px;
+		border: 2px solid $accent;
+	}
+}
+.owl-theme .owl-controls .owl-page span {
+	background: none repeat scroll 0 0 0;
+	border: 2px solid #B9B9B9;
+	border-radius: 20px;
+	display: block;
+	height: 9px;
+	margin: 25px 7px;
+	width: 9px;
+} 
+
+/* search */
+
+#modal-search {
+	position: absolute;
+	top: -500%;
+	bottom: 0;
+	left: 50px;
+	width: calc(100% - 50px);
+	background-color: rgba($bg-sec, 0.9);
+	z-index: 1;
+	height: 100vh;
+	transition: 1s ease;
+	&.active {
+		top: 0;
+	}
+}
+
+.modal-wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translate(5%, 20vh);
+	width: 90%;
+}
+
+#search-form {
+	display: block;
+	width: 80%;
+	float: left;
+	text-align: left;
+	font-size: 1.2rem;
+}
+input,
+label {
+	display: block;
+	color: $txt-sec;
+}
+
+input {
+	background-color: transparent;
+	border-bottom: 2px solid $txt-sec;
+	width: 100%;
+	height: 5vh;
+	outline: none;
+}
+
+label {
+	margin-top: 10px;
+	font-weight: 200;
+}
+
+.btn-close-form {
+	display: block;
+	float: right;
+	width: 40px;
+	height: 40px;
+	background-color: transparent;
+	cursor: pointer;
+	outline: none;
+		&:hover span {
+			background-color: $accent;
+		}
+	span {
+		display: block;
+		background-color: $txt-sec;
+		width: 40px;
+		height: 2px;
+		@include add-ease;
+	}
+}
+
+.close-one {
+	margin-bottom: 8px;
+	transform: rotate(45deg) translate(7px, 7px);
+}
+
+.close-two {
+	transform: rotate(-45deg) ;
+}

@@ -1,0 +1,173 @@
+/* main nav */
+
+.nav-main {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 50px;
+	background-color: $bg_sec;
+	@include add-shadow-right;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	z-index: 10;
+	img {
+		width: 30px;
+		height: 30px;
+		margin: 10px 10px;
+	}
+	.icon-logo img{
+		margin-bottom: 60px;
+	}
+	.icon {
+		display: block;
+		width: 30px;
+		height: 30px;
+		margin: 0px 10px 30px;
+		background-size: cover;
+		@include add-ease;
+	}
+	.icon-home {
+		background-image: url('../img/icons/home.png');
+		&:hover {
+			background-image: url('../img/icons/home-a.png');
+		}
+	}
+	.icon-basket {
+		background-image: url('../img/icons/basket.png');
+		&:hover {
+			background-image: url('../img/icons/basket-a.png');
+		}
+	}
+	.icon-search {
+		background-image: url('../img/icons/search.png');
+		&:hover {
+			background-image: url('../img/icons/search-a.png');
+		}
+	}
+	.icon-download {
+		background-image: url('../img/icons/in.png');
+		margin-bottom: 10px;
+		&:hover {
+			background-image: url('../img/icons/in-a.png');
+		}
+	}
+}
+
+/* side menu */
+
+.nav-toggle {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+	background-color: $bg-sec;
+	@include add-shadow-right;
+	padding-top: 14px;
+	cursor: pointer;
+	transition: all 0.5s;
+	z-index: 10;
+	span {
+		display: block;
+		width: 12px;
+		height: 2px;
+		background-color: $accent;
+		@include margin(2px);
+		transition: all 0.5s;
+	}
+	&:hover {
+		opacity: 0.6;
+	}
+
+	&.nav-active {
+		.one {
+			transform: rotate(45deg) translate(1px, -1px);
+		}
+		.two {
+			opacity: 0;
+		}
+		.three {
+			transform: rotate(-45deg) translate(1px, 1px);
+		}
+	}
+}
+
+.side-menu {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: -200px;
+	width: 200px;
+	background-color: $bg-sec;
+	@include add-shadow-left;
+	z-index: 7;
+	transition: 0.7s ease;
+	.nav-side {
+		transform: translate(-16%, 20vh);
+		text-align: right;
+		vertical-align: middle;
+	}
+	li{
+		margin-bottom: 40px;
+	}
+	a {
+		position: relative;
+		line-height: 30px;
+		vertical-align: middle;
+		padding-right: 40px;
+		text-transform: uppercase;
+		transition: 0.7s ease;
+		color: $txt-sec;
+		&:before {
+			content:'';
+			background-size: cover;
+			position: absolute;
+			right: 0px;
+			top: -6px;
+			width: 30px;
+			height: 30px;
+			transition: 0.7s ease;
+		}
+		&:hover {
+			color: $accent;
+		}
+	}
+	.icon-living:before {
+		background-image: url('../img/icons/living-room.png');
+	}
+	.icon-living:hover:before {
+		background-image: url('../img/icons/living-room-a.png');
+	}
+	.icon-office:before {
+		background-image: url('../img/icons/office.png');
+	}
+	.icon-office:hover:before {
+		background-image: url('../img/icons/office-a.png');
+	}
+	.icon-kids:before {
+		background-image: url('../img/icons/kids.png');
+	}
+	.icon-kids:hover:before {
+		background-image: url('../img/icons/kids-a.png');
+	}
+	.icon-kitchen:before {
+		background-image: url('../img/icons/kitchen.png');
+	}
+	.icon-kitchen:hover:before {
+		background-image: url('../img/icons/kitchen-a.png');
+	}
+	.icon-acc:before {
+		background-image: url('../img/icons/acc.png');
+	}
+	.icon-acc:hover:before {
+		background-image: url('../img/icons/acc-a.png');
+	}
+	
+	&.side-active {
+		right: 0;
+	}
+
+}
+
